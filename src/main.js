@@ -1,4 +1,4 @@
-const API_KEY = "api_key=[YOUR_APIKEY]";
+const API_KEY = "api_key=db990f863c60b80e1f35d1566057dd73";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 const menu = document.getElementById("menu-btn");
@@ -23,6 +23,7 @@ menu.addEventListener("click", () => {
               <input
                 type="text"
                 placeholder="Search"
+                id="search-form"
                 class=" md:block bg-black border-3 border border-red-950 w-full h-10 p-2 pl-5 rounded-full text-white"
               ></input>
               <button
@@ -35,6 +36,17 @@ menu.addEventListener("click", () => {
         </div>
     `;
     document.querySelector("header").appendChild(dropmenu);
+    const searchButton = dropmenu.querySelector("#search-btn");
+    searchButton.addEventListener("click", () => {
+      const SEARCH_URL = BASE_URL + "/search/movie?" + API_KEY;
+      const Term = dropmenu.querySelector("#search-form").value;
+      const container = document.getElementById("main");
+
+      const heading = document.querySelector("#heading");
+      heading.innerText = `Showing Results For ${Term}`;
+      container.innerHTML = "";
+      getResult(SEARCH_URL + "&query=" + Term);
+    });
   }
 });
 getResult(API_URL);
