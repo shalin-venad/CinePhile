@@ -12,7 +12,7 @@
   <body class="bg-black">
     <header>
       <nav class="flex items-center justify-between h-15 bg-black">
-        <h1 class="text-white font-bold text-3xl ml-3"><span class="text-red-600">Cine</span>phile</h1>
+        <h1 id="logo" class="text-white font-bold text-3xl ml-3"><span class="text-red-600">Cine</span>phile</h1>
         <button
           id="menu-btn"
           class="md:hidden text-white text-2xl focus:outline-none p-4"
@@ -23,6 +23,7 @@
           <input
             type="text"
             placeholder="Search"
+            id="search-form"
             class="hidden md:block bg-black border-3 border border-red-950 w-full h-10 p-2 pl-5 rounded-full text-white"
           ></input>
           <button
@@ -39,7 +40,7 @@
         </ul>
       </nav>
     </header>
-
+    <h1 id="heading" class="text-white my-5 font-bold text-3xl text-center">Popular Movies & Shows</h1>
     <div id="main" class="flex justify-around flex-wrap">
     </div>
     </div>

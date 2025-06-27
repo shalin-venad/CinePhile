@@ -47,18 +47,7 @@ function getResult(url) {
 
 function showResult(data) {
   const container = document.getElementById("main");
-  const heading = document.createElement("h1");
-  heading.textContent = "Popular Movies & Shows";
-  heading.classList.add(
-    "text-white",
-    "my-5",
-    "font-bold",
-    "text-3xl",
-    "text-center"
-  );
   const headerTag = document.querySelector("header");
-
-  headerTag.insertAdjacentElement("afterend", heading);
 
   const POSTER_URL = "https://image.tmdb.org/t/p/w500";
   data.forEach((element) => {
@@ -82,3 +71,24 @@ function showResult(data) {
     container.appendChild(card);
   });
 }
+
+const searchButton = document.getElementById("search-btn");
+searchButton.addEventListener("click", () => {
+  const SEARCH_URL = BASE_URL + "/search/movie?" + API_KEY;
+  const Term = document.getElementById("search-form").value;
+  const container = document.getElementById("main");
+
+  const heading = document.querySelector("#heading");
+  heading.innerText = `Showing Results For ${Term}`;
+  container.innerHTML = "";
+  getResult(SEARCH_URL + "&query=" + Term);
+});
+
+const logo = document.getElementById("logo");
+logo.addEventListener("click", () => {
+  const heading = document.querySelector("#heading");
+  heading.innerText = "Popular Movies & Shows";
+  const container = document.getElementById("main");
+  container.innerHTML = "";
+  getResult(API_URL);
+});
