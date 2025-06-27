@@ -9,11 +9,22 @@ A minimal web project inspired by IMDb that allows users to view popular movies 
 - Hover to reveal movie overview and rating
 
 ## 🛠️ Tech Stack
--Vanilla JavaScript
--HTML5
--Tailwind CSS
--Vite for fast development
--TMDB API for movie data
+- Vanilla JavaScript
+- HTML5
+- Tailwind CSS
+- Vite for fast development
+- TMDB API for movie data
+
+## 📷 Screenshots
+<div style="white-space: nowrap;">
+  <img src="./public/Screenshots/home.png" width="500px"/>
+  <img src="./public/Screenshots/search.png" width="500px"/>
+</div>
+For Mobile Devices:
+<div style="white-space: nowrap;">
+  <img src="./public/Screenshots/mobile_home.png" width="300px" style="display: inline-block; margin-right: 30px;" />
+  <img src="./public/Screenshots/mobile_menu.png" width="300px" style="display: inline-block;" />
+</div>
 
 
 ## 📦 Setup Instructions
@@ -33,7 +44,9 @@ npm install tailwindcss @tailwindcss/vite
 
 3.Run the development server
 
-```npm run dev```
+```
+npm run dev
+```
 
 4.Open in Browser
 
@@ -47,4 +60,6 @@ You need a free TMDB API key:
 
 2.Replace the API key in main.js:
 
-```const API_KEY = "api_key=YOUR_API_KEY_HERE";```
+```
+const API_KEY = "api_key=YOUR_API_KEY_HERE";
+```
