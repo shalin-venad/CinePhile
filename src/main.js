@@ -1,4 +1,4 @@
-const API_KEY = "api_key=db990f863c60b80e1f35d1566057dd73";
+const API_KEY = "api_key=[YOUR_API_KEY]";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 const menu = document.getElementById("menu-btn");
