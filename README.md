@@ -31,7 +31,7 @@ For Mobile Devices:
 1.Clone the repository
 
 ```
-git clone https://github.com/your-username/CinePhile.git
+git clone <repository-url>
 cd CinePhile
 ```
 
